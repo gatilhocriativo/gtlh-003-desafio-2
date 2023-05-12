@@ -15,7 +15,7 @@
   </head>
   <body>
     <div class="card">
-      <div class="screen-1">
+      <div id="submitForm" class="screen-1">
         <div class="icon">
           <img
             src="./images/icon-star.svg"
@@ -29,20 +29,46 @@
           is appreciated to help us improve our offering!
         </p>
 
-        <form onsubmit="">
+        <form onsubmit="handleSubmit(event)">
           <div class="rating-buttons">
-            <input type="button" value="1" />
-            <input type="button" value="2" />
-            <input type="button" value="3" />
-            <input type="button" value="4" />
-            <input type="button" value="5" />
+            <input
+              class="rating-button"
+              onclick="handleActive(event)"
+              type="button"
+              value="1"
+              class="active"
+            />
+            <input
+              class="rating-button"
+              onclick="handleActive(event)"
+              type="button"
+              value="2"
+            />
+            <input
+              class="rating-button"
+              onclick="handleActive(event)"
+              type="button"
+              value="3"
+            />
+            <input
+              class="rating-button"
+              onclick="handleActive(event)"
+              type="button"
+              value="4"
+            />
+            <input
+              class="rating-button"
+              onclick="handleActive(event)"
+              type="button"
+              value="5"
+            />
           </div>
 
           <button type="submit" class="button">Submit</button>
         </form>
       </div>
 
-      <div class="screen-2">
+      <div id="submitDone" class="screen-2 hidden">
         <div class="header-image">
           <img
             src="./images/illustration.svg"
@@ -51,7 +77,7 @@
         </div>
 
         <div class="option-select">
-          <p>You selected <span id="option-value">4</span> out of 5</p>
+          <p>You selected <span id="option-value"></span> out of 5</p>
         </div>
 
         <h3 class="title">Thank you!</h3>
@@ -61,5 +87,7 @@
         </p>
       </div>
     </div>
+
+    <script src="./app/index.js"></script>
   </body>
 </html>

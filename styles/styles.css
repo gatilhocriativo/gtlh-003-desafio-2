@@ -104,6 +104,11 @@ body {
   transition: all 250ms ease-in-out;
 }
 
+.screen-1 form .rating-buttons input.active {
+  background-color: var(--orange-100);
+  color: var(--white);
+}
+
 .screen-1 form .rating-buttons input:hover {
   background-color: var(--dark-blue-600);
   color: var(--white);
@@ -174,6 +179,6 @@ body {
   color: var(--orange-100);
 }
 
-.screen-1 {
+.hidden {
   display: none;
 }
